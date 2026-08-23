@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        ZStack(alignment: .leading) {
+            
+            HStack(spacing: 20) {
+                
+                SidebarView()
+                MainContentView()
+                
+            }
+            .padding(20)
+            .frame(minWidth: 700, minHeight: 500)
         }
-        .padding()
     }
 }
 
