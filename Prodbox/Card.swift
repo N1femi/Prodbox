@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Card: Identifiable {
+struct Card: Identifiable, Hashable {
     let id = UUID()
     let title: String
     let description: String
+    let icon: String
 }

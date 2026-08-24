@@ -13,5 +13,6 @@ struct ProdboxApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.hiddenTitleBar)
     }
 }
