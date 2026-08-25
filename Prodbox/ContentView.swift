@@ -14,9 +14,9 @@ struct ContentView: View {
     
     let cards: [Card] = [
         Card(title: "Home", description: "No place like it!", icon: "house"),
-        Card(title: "Reminders", description: "Don't forget.", icon: "house"),
-        Card(title: "Calendar", description: "Keep making progress.", icon: "house"),
-        Card(title: "Settings", description: "Customize and Configure!", icon: "house")
+        Card(title: "Reminders", description: "Don't forget.", icon: "list.bullet.clipboard"),
+        Card(title: "Calendar", description: "Keep making progress.", icon: "calendar"),
+        Card(title: "Settings", description: "Customize and Configure!", icon: "gearshape")
     ]
     
     var body: some View {
@@ -26,12 +26,7 @@ struct ContentView: View {
                     .tag(card)
             }
         } detail: {
-            //MainContentView()
-            if let selectedCard {
-                Text(selectedCard.title)
-            } else {
-                Text("Select Something")
-            }
+            TabView(targetTab: selectedCard?.title)
             
         }
     }
