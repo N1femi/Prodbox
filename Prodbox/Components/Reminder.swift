@@ -10,6 +10,7 @@ import Foundation
 struct Reminder: Identifiable, Hashable {
     let id = UUID()
     let title: String
+    let isCompleted: Bool = false
     let description: String
     let parent: UUID?
 }

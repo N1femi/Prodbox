@@ -18,7 +18,7 @@ struct ReminderView: View {
     
     var body: some View {
         List(testReminders) { reminder in
-            Text(reminder.title)
+            Label(reminder.title, systemImage: reminder.isCompleted ? "circle.fill" : "circle" )
         }
     }
 }
